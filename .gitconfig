@@ -1,0 +1,27 @@
+[alias]
+	co = checkout
+	con = checkout -b 
+  s = status
+	st = status -sb
+  a = add -p
+  lg = log --graph --pretty=format:'%Cred%h%Creset%C(yellow)%d%Creset %s %Cgreen(%cd) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+	lgs = log --graph --pretty=format:'%Cred%h%Creset%C(yellow)%d%Creset %s %Cgreen(%cd) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative --stat
+	lgp = log --pretty=format:'%Cred%h%Creset%C(yellow)%d%Creset %s %Cgreen(%cd) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative --patch --ignore-space-change
+  logs = log --pretty=short --graph --all # Shows full logs of git tree
+  co = checkout # Checkout to different branch
+  cob = checkout -b # Checkout to a new branch that doesn't exist
+	yeet = push -u origin # For first time commit to a new branch
+	undo = reset --soft HEAD~1 # Undo commit made
+	latest = for-each-ref --sort=-committerdate refs/ --format='%(HEAD) %(color:red)%(objectname:short)%(color:reset) %(color:yellow)(%(refname:short))%(color:reset) %(contents:subject) %(color:green)(%(committerdate:relative))%(color:reset) %(color:bold blue)<%(authorname)>%(color:reset)'
+
+[merge]
+	tool = vscode
+  
+[mergetool "vscode"]
+	cmd = code --wait --new-window $MERGED
+  
+[diff]
+	tool = vscode
+  
+[difftool "vscode"]
+	cmd = code --wait --new-window --diff $LOCAL $REMOTE
