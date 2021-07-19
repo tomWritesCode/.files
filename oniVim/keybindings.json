@@ -1,0 +1,6 @@
+[
+ { "key": "<TAB>", "command": "workbench.action.quickOpen", "when": "editorTextFocus && normalMode"}, 
+ { "key": "<SPACE>", "command": "workbench.action.files.save", "when": "editorTextFocus && normalMode"},
+ { "key": "<S-Up>", "command": ":m .-2", "when": "editorTextFocus && normalMode"},
+ { "key": "<S-Down>", "command": ":m .+1", "when": "editorTextFocus && normalMode"}
+]
