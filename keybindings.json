@@ -1,0 +1,8 @@
+// VS Code Keybindings
+// Place your key bindings in this file to override the defaults
+[
+// Sets focus to integrated terminal
+{ "key": "ctrl+`", "command": "workbench.action.terminal.focus"},
+// Sets focus back to editor
+{ "key": "ctrl+1", "command": "workbench.action.focusActiveEditorGroup"}
+]
